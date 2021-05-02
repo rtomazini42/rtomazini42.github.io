@@ -22,9 +22,9 @@
 <p>Photoshop - Unity</p>
 
 
-####But I am always learning new languages and technologies. <h3>
+<h3> But I am always learning new languages and technologies. </h3>
 
-### You can find me at: <h3>
+<h3> You can find me at: </h3>
 
 <a href="https://www.linkedin.com/in/renan-tomazini-b9a75263/">
   <code><img alt="My linkedin" width="32" src="https://cdn.icon-icons.com/icons2/1099/PNG/512/1485482199-linkedin_78667.png" /></code>
