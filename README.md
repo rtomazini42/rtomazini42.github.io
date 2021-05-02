@@ -7,9 +7,9 @@
 
 <h3>these are some of the computer languages that I have the most mastery of:</h3>
 
-<img border="0" alt="Python" src="https://cdn.icon-icons.com/icons2/112/PNG/512/python_18894.png" width="64" height="64"  align="MIDDLE"><p>Python</p>
-<img border="0" alt="Java" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_logo_icon_146458.png" width="64" height="64"  align="MIDDLE"><p>Java</p>
-<img border="0" alt="C" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/c_original_logo_icon_146611.png" width="64" height="64"  align="MIDDLE"><p>C</p>
+<img border="0" alt="Python" src="https://cdn.icon-icons.com/icons2/112/PNG/512/python_18894.png" width="64" height="64"  align="MIDDLE">
+<img border="0" alt="Java" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_logo_icon_146458.png" width="64" height="64"  align="MIDDLE">
+<img border="0" alt="C" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/c_original_logo_icon_146611.png" width="64" height="64"  align="MIDDLE">
 
 
 
