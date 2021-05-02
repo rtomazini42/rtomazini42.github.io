@@ -6,11 +6,11 @@
 <p>I love learning diverse subjects, but computing, game design, data science and cyberculture are my passion.</p>
 
 <h3>these are some of the computer languages that I have the most mastery of:</h3>
-
+<p float="left">
 <img border="0" alt="Python" src="https://cdn.icon-icons.com/icons2/112/PNG/512/python_18894.png" width="64" height="64">
 <img border="0" alt="Java" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_logo_icon_146458.png" width="64" height="64">
 <img border="0" alt="C" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/c_original_logo_icon_146611.png" width="64" height="64">
-
+</p>
 
 
 <h3>And here are some software that I know how to work with: </h3>
