@@ -11,7 +11,7 @@
 <img border="0" alt="Java" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_logo_icon_146458.png" width="64" height="64">
 <img border="0" alt="C" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/c_original_logo_icon_146611.png" width="64" height="64">
 </p>
-<p>Python-Java-C</o>
+<p>Python - Java - C</o>
 
 
 <h3>And here are some software that I know how to work with: </h3>
@@ -19,7 +19,7 @@
 <img border="0" alt="Photoshop" src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_photoshop_icon_130268.png" width="64" height="64">
 <img border="0" alt="Unity" src="https://cdn.icon-icons.com/icons2/2248/PNG/512/unity_icon_136074.png" width="64" height="64">
 </p>
-
+<p>Photoshop - Unity</p>
 
 
 ####But I am always learning new languages and technologies. <h3>
