@@ -11,6 +11,7 @@
 <img border="0" alt="Java" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_logo_icon_146458.png" width="64" height="64">
 <img border="0" alt="C" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/c_original_logo_icon_146611.png" width="64" height="64">
 </p>
+<p>Python-Java-C</o>
 
 
 <h3>And here are some software that I know how to work with: </h3>
