@@ -7,7 +7,7 @@
 
 ![Tomazini's github stats](https://github-readme-stats.vercel.app/api?username=rtomazini42&count_private=false&show_icons=true&theme=tokyonight&hide_border=true&hide=stars&hide_title=true)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rtomazini42&hide=html,css&theme=tokyonight)](https://github.com/rtomazini42/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rtomazini42&hide=html,css&theme=tokyonight&hide_border=true)](https://github.com/rtomazini42/github-readme-stats)
 
 <h3>these are some of the computer languages that I have the most mastery of:</h3>
 <p float="left">
