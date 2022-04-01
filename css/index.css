@@ -1,0 +1,120 @@
+body{
+  background: #001524;
+  background-image: url("../images/fundo.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:top;
+  background-attachment:fixed;
+  font-family: 'Lato', sans-serif;
+  font-size:22px;
+
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align:center;
+  width: 15%;
+}
+  
+.banner{
+  text-align:center;
+  background-color:rgba(0,0,0,0.8);
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom:0%;
+  padding-bottom: 25px;
+  color:white;
+  border-style: inherit;
+}
+
+.conteudo{
+  margin-top:0%;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color:rgba(255,255,255,0.8);
+  text-align:center;
+  color:black;
+  position: relative;
+  border-style: solid;
+  border-width: inherit;
+  border-color: black;
+  border-style: none;
+}
+.conteudo a{
+  color:black;
+}
+
+
+/*css ocean*/
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: rgba(255,255,255,1);
+}
+.content a{
+  color: black;
+  text-align:center;
+  background-color: rgba(255,255,255,1);
+  margin-bottom:0px;
+}
+
+.content img{
+  width: 4%;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% {
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:26px;
+  }
+}
