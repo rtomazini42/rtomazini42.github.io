@@ -1,7 +1,17 @@
+@font-face {
+  font-family: 'pixel'; /* Substitua 'NomeDaFonte' pelo nome desejado para a fonte */
+  src: url('../assets/font/Pixel-UniCode.ttf') format('truetype');
+  /* Substitua '../caminho-para-a-pasta-das-fontes/' pelo caminho correto para a pasta das fontes e 'sua-fonte.woff' pelo nome do arquivo da fonte */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body{
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&display=swap');
-  font-family: 'Roboto', sans-serif;
-  background-color: #bcbcac;
+  font-family: 'pixel', sans-serif; 
+  font-size: medium;
+  background-color: #36868f ;
+  
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23383b4d' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
 
   
@@ -21,19 +31,19 @@ body{
   width:80%;
   text-align:center;
   vertical-align: middle;
-  background-color: #383b4d;
+  background-color:  #0f052d;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23507294' fill-opacity='0.4' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 1%;
   padding-bottom: 1%;
-  color:#efe30e;
+  color: #5fc75d;
   border-radius: 3rem;
   border-top: 0.5ex solid black;
   border-left: 0.5ex solid black;
   border-right: 2ex solid black;
   border-bottom: 2ex solid black;
-
+  
   
 }
 
@@ -50,7 +60,8 @@ body{
 .banner h1 {
   margin-top: 1%;
   margin-bottom: 1%;
-  font-size: 42px;
+  font-size: 8rem;
+  
 }
 
 .conteudo{
@@ -58,7 +69,7 @@ body{
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 5%;
-  background-color:#383b4d;
+  background-color:#0f052d ;
   text-align:center;
   color:black;
   position: relative;
@@ -78,18 +89,20 @@ body{
 .conteudo p{
   margin-left: 1%;
   margin-right: 1%;
-  font-size: large;
-  color: #ffffff;
+  font-size: 3rem;
+  color: white;
 }
 
 .conteudo h2{
-  color: #faec4e;
+  color: white;
   font-size: 36px;
   margin-bottom: 2%;
+  font-size: 4rem;
 }
 
 .conteudo h3{
-  color: #d4b40e;
+  color: #5fc75d;
+  font-size: 6rem;
 }
 
 .conteudo h4{
@@ -100,13 +113,21 @@ body{
 
 .conteudo .menuPorts{
  display: flex;
+ width: 100%;
 }
 
 .conteudo .menuPorts2{
   display: inline-flex;
   padding: auto;
-  width: 50%;
+  width: 100%;
  }
+
+ .conteudo .menuPorts3{
+  display: inline-flex;
+  
+ }
+
+ 
 
 .conteudo .botao{
   margin-bottom: 3%;
@@ -114,8 +135,8 @@ body{
 }
 
 .conteudo a{
-  color:#d4b40e;
-  font-size: large;
+  color:#5fc75d;
+  font-size: 4rem;
   padding-bottom: 5%;
 
 }
@@ -135,13 +156,22 @@ body{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 50%;
   border-radius: 3rem;
   border-top: 0.5ex solid black;
   border-left: 0.5ex solid black;
   border-right: 2ex solid black;
   border-bottom: 2ex solid black;
 }
+
+
+.conteudo .menuPorts2{
+  display: inline-flex;
+  padding: auto;
+  vertical-align: middle;
+  align-items: center;
+  width: 100%;
+ }
 
 
 @media (max-width: 1400px) {
@@ -174,6 +204,11 @@ body{
     border-right: 2ex solid black;
     border-bottom: 2ex solid black;
   }
+
+  .conteudo .menuPorts3{
+    display: inline-table;
+    width: 50%;
+   }
 }
 
 /*css ocean*/
@@ -191,13 +226,14 @@ body{
   position:relative;
   height:20vh;
   text-align:center;
-  background-color: rgb(0, 0, 0);
+  background-color: #0f052d;
 }
 .content a{
   color: rgb(209, 209, 209);
   text-align:center;
-  background-color: rgb(0, 0, 0);
+  background-color: #0f052d;
   margin-bottom:0px;
+  font-size: 3rem;
 }
 
 .content img{
@@ -207,6 +243,10 @@ body{
 }
 
 /* Animation */
+
+.ondas {
+  line-height: 0px !important;
+}
 
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
@@ -247,4 +287,60 @@ body{
   h1 {
     font-size:26px;
   }
+}
+
+
+/* negocio do idioma */
+.lang-link {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  font-size: 4rem;
+  cursor: pointer;
+  position: fixed;
+}
+
+
+
+/* animacao de cores */
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Aplique a animação à imagem */
+.color-changing {
+  animation: changeColor 10s linear infinite; /* Troque 5s pelo tempo desejado para a animação */
+}
+
+
+@keyframes changeBorder {
+  0% {
+    border-color: #0f052d ;
+  }
+  25% {
+    border-color: #203671 ;
+  }
+  50% {
+    border-color: #36868f ; /* Cor intermediária */
+  }
+  75% {
+    border-color: #5fc75d; /* Cor intermediária */
+  }
+  100% {
+    border-color: #0f052d ;
+  }
+}
+
+/* Aplique a animação às bordas da imagem */
+.border-changing {
+  border-top: 0.5ex solid black;
+  border-left: 0.5ex solid black;
+  border-right: 2ex solid black;
+  border-bottom: 2ex solid black;
+  animation: changeBorder 5s linear infinite; /* Troque 5s pelo tempo desejado para a animação */
 }
