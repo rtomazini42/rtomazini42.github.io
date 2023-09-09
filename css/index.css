@@ -97,12 +97,12 @@ body{
   color: white;
   font-size: 36px;
   margin-bottom: 2%;
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 .conteudo h3{
   color: #5fc75d;
-  font-size: 6rem;
+  font-size: 9rem;
 }
 
 .conteudo h4{
@@ -188,13 +188,7 @@ body{
 
 
 
-   #info{
-    display: none;
-   }
 
-   .conteudo .menuPorts2{
-    display: none;
-   }
   
   .conteudo .botao img {
     width: 90%;
