@@ -344,3 +344,16 @@ body{
   border-bottom: 2ex solid black;
   animation: changeBorder 5s linear infinite; /* Troque 5s pelo tempo desejado para a animação */
 }
+
+
+.divisao {
+
+  height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  background-color: #203671;
+  opacity: 0.8;
+  background-size: 20px 20px;
+  background-image:  repeating-linear-gradient(to right, #5fc75d, #5fc75d 1px, #203671 1px, #203671);
+}
