@@ -127,6 +127,10 @@ body{
   
  }
 
+ .conteudo .menuPorts4{
+  display: flex;
+  width: 100%;
+ }
  
 
 .conteudo .botao{
@@ -201,6 +205,11 @@ body{
 
   .conteudo .menuPorts3{
     display: inline-table;
+    width: 50%;
+   }
+
+   .conteudo .menuPorts4{
+    display: flex;
     width: 50%;
    }
 }
