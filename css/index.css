@@ -131,20 +131,24 @@ body{
 
 
 .conteudo .menuPorts{
- display: flex;
- width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 .conteudo .menuPorts2{
-  display: inline-flex;
-  padding: auto;
-  width: 100%;
+
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
  }
 
  .conteudo .menuPorts3{
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+
   
  }
+
+
 
  .conteudo .menuPorts4{
   display: flex;
@@ -199,13 +203,7 @@ picture {
   align-content: center;
 }
 
-.conteudo .menuPorts2{
-  display: inline-flex;
-  padding: auto;
-  vertical-align: middle;
-  align-items: center;
-  width: 100%;
- }
+
 
 
 @media (max-width: 1400px) {
@@ -237,6 +235,22 @@ picture {
     display: inline-table;
   
    }
+
+   .conteudo .menuPorts2{
+    display: block;
+    width: 100%;
+   }
+
+   .conteudo .menuPorts3{
+    display: block;
+    width: 100%;
+  
+    
+   }
+
+   .conteudo .menuPorts3 .botao {
+    width: 100%;
+  }
 
    .conteudo .menuPorts4{
     display: flex;
