@@ -1,22 +1,9 @@
-@font-face {
-  font-family: 'pixel'; /* Substitua 'NomeDaFonte' pelo nome desejado para a fonte */
-  src: url('../assets/font/Pixel-UniCode.ttf') format('truetype');
-  /* Substitua '../caminho-para-a-pasta-das-fontes/' pelo caminho correto para a pasta das fontes e 'sua-fonte.woff' pelo nome do arquivo da fonte */
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'pixel2'; /* Substitua 'NomeDaFonte' pelo nome desejado para a fonte */
-  src: url('../assets/font/PixelEmulator.ttf') format('truetype');
-  /* Substitua '../caminho-para-a-pasta-das-fontes/' pelo caminho correto para a pasta das fontes e 'sua-fonte.woff' pelo nome do arquivo da fonte */
-  font-weight: normal;
-  font-style: normal;
-}
 
 
 body{
-  font-family: 'pixel', sans-serif; 
+  
+  font-family: "Montserrat", sans-serif;
   font-size: medium;
   background-color: #D4ADFC ;
   
@@ -74,7 +61,7 @@ body{
   margin-bottom: 1%;
   font-size: 4.5rem;
   color: #ffffff;
-  font-family: pixel2;
+  font-family: "Roboto", sans-serif;
 }
 
 .banner h2 {
@@ -82,7 +69,7 @@ body{
   margin-bottom: 1%;
   font-size: 3rem;
   color: #ffffff;
-  font-family: pixel2;
+  font-family: "Roboto", sans-serif;
 }
 
 .conteudo{
