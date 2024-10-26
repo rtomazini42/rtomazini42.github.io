@@ -18,7 +18,7 @@ const amigos = [
     {
         nome: "Rozelma França",
         link: "https://www.falecomrozelma.com/",
-        imagem: "https://media.licdn.com/dms/image/v2/D4D03AQEqAv5ntdZ-CA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683990975309?e=1735171200&v=beta&t=vd3RzBx9k8lQIrawLxZw2XCLIysSfehIYv5Rgg4Pcco"
+        imagem: "assets/perfiisRerkut/rozelma.jpeg"
     },
 
     {
@@ -54,7 +54,7 @@ const amigos = [
     {
         nome: "Leonardo de Oliveira",
         link: "https://www.linkedin.com/in/leonardo-braulio/",
-        imagem: "https://media.licdn.com/dms/image/v2/D4D03AQEreKyyL8I-wQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1701625424307?e=1735171200&v=beta&t=FDUrfSFt_Jc98IIch7ZreyDS9Tl3x2ychz-WQc0Zmr4"
+        imagem: "assets/perfiisRerkut/leo.jpeg"
     },
     {
         nome: "Joselito",
