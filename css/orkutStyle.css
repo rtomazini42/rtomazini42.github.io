@@ -15,8 +15,9 @@
     color: white;
     padding: 0rem;
     display: flex;
-    align-items: center; /* Faz com que os itens filhos ocupem a altura total */
+    align-items: center; 
     gap: 1em;
+   /* position: relative;*/ /* Como isso aqui deveria funcionar? */
   }
   .topo a{
     text-decoration: none;
