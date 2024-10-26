@@ -66,6 +66,11 @@ const amigos = [
         link: "https://github.com/pop-os",
         imagem: "https://avatars.githubusercontent.com/u/33131755?s=200&v=4"
     },
+    {
+        nome: "Brenno Machado",
+        link: "https://github.com/brennomachado",
+        imagem: "https://avatars.githubusercontent.com/u/3151658?v=4"
+    },
     //{
     //    nome: "UFRPE",
      //   link: "https://ufrpe.br/",
