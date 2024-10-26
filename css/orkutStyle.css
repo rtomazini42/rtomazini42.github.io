@@ -301,7 +301,7 @@
 
 
 
-  @media (max-width: 1170px) {
+  @media (max-width: 1130px) {
     /* Ocultar a coluna "Amigos" */
     .coluna-direita { 
         display: none; /* Esconde a coluna de amigos */
@@ -345,6 +345,41 @@
     /* Centralizar o conteúdo do topo */
     .topo {
         justify-content: center; /* Centraliza os itens do topo */
+    }
+
+    /* Ocultar a foto */
+    .me { 
+        display: none; /* Esconde a foto */
+        width: 20%;
+    }
+
+    /* Alterar a disposição das colunas */
+    .conteudo {
+        flex-direction: column; /* Altera a direção das colunas para vertical */
+        align-items: center; /* Centraliza as colunas horizontalmente */
+    }
+
+    .coluna-esquerda, .coluna-meio {
+        width: 100%; /* Garante que ambas ocupem a largura total */
+        margin-bottom: 1em; /* Espaço entre as colunas */
+    }
+}
+
+
+@media (max-width: 540px) {
+    /* Ocultar a coluna "Amigos" */
+    .conteudo{
+        width: 100%;
+        margin-left:0;
+        margin-right:0
+    }
+    .coluna-direita { 
+        display: none; /* Esconde a coluna de amigos */
+    }
+
+    /* Centralizar o conteúdo do topo */
+    .topo a{
+        display: none; /* Centraliza os itens do topo */
     }
 
     /* Ocultar a foto */
