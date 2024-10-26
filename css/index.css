@@ -250,6 +250,9 @@ picture {
 
 }
 
+
+
+
 @media (max-width: 820px) {
   .conteudo .menuPorts{
     display: block;
@@ -258,9 +261,6 @@ picture {
    .linguagens{
     display: none;
    }
-
-
-
 
   
   .conteudo .botao img {
@@ -297,6 +297,25 @@ picture {
     display: flex;
    
    }
+}
+
+@media (max-width: 480px) {
+  .banner h1 {
+
+    font-size: 3.5rem;
+    }
+
+  .conteudo h3{
+    font-size: 7rem;
+  }
+  .conteudo h2 {
+    color: 03001C;
+    font-size: 36px;
+    margin-bottom: 2%;
+    font-size: 4.3rem;
+    text-align: center;
+  }
+
 }
 
 /*css ocean*/
