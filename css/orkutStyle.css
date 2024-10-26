@@ -398,4 +398,8 @@
         width: 100%; /* Garante que ambas ocupem a largura total */
         margin-bottom: 1em; /* Espaço entre as colunas */
     }
+
+    #inicio{
+        display: block;
+    }
 }
