@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    /*font-family: Arial, sans-serif; */
+    font-family: "Montserrat", sans-serif;
+    background-color: #d9e6f7;
+  }
+  
+  .topo {
+    background-color: #6f97cb;
+    color: white;
+    padding: 0rem;
+    display: flex;
+    align-items: center; /* Faz com que os itens filhos ocupem a altura total */
+    gap: 1em;
+  }
+  .topo a{
+    text-decoration: none;
+    color: white;
+  }
+
+
+  #principal {
+    background-color: #f4f4f4;
+    color: #6f97cb;
+    padding: 1rem;
+   /* margin-left: 1em; */
+   font-weight: bold;
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo do texto */
+    height: 100%; /* Garante que o elemento ocupa toda a altura */
+
+  }
+  
+  .conteudo {
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+    margin-left: 15vh;
+    margin-right: 15vh;
+  }
+  
+  .coluna {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 1rem;
+    flex: 1;
+    border-color: #c8d1df;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-style: solid;
+  }
+  
+  .coluna-esquerda {
+    flex: 1;
+    margin-bottom: 31%;
+  }
+  
+  .coluna-meio {
+    flex: 2;
+    border-top-right-radius: 5ex;
+  }
+  
+  .coluna-direita {
+    flex: 1;
+  }
+
+
+  .colprofile{
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+  }
+
+  .profile img{
+    width: 100%;
+  }
+  
+  .profile {
+    background-color: #f0f0f0; /* Cor de fundo para cada perfil */
+    margin: 0.3em;
+    text-align: center;
+  
+    /* Espaçamento interno para cada perfil */
+   /* border: 1px solid #ccc; /* Borda opcional para cada perfil 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra opcional 
+    border-radius: 8px; /* Cantos arredondados opcionais */
+}
+.profile a{
+    text-decoration: none; 
+    padding-top: 1rem;
+}
+
+  .me{
+    width: 100%;
+  }
+  
+  .enfeites {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    font-size: small;
+    color: #8b8a88;
+    margin-top: 1rem;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+  }
+  
+  
+.tit{
+   text-align: center;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+ 
+}
+
+.conteudo_hierarquico{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  
+   
+}
+
+.conteudo_hierarquico h3{
+    background-color:  #eef8fe;
+}
+.conteudo_hierarquico p{
+    background-color:  #ddefff;
+    color:#909ba7
+}
+
+.divisoria{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #c3c2cc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.coluna-extra {
+    grid-column: 1 / -1; /* Ocupa a largura total na parte de baixo */
+    grid-row: 3;
+  }
+.coluna-bottom{
+    margin-top: 1rem;
+}
+
+.meNome{
+    font-size: xxx-large;
+}
+
+.lang {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+  }
+
+
+  @media (max-width: 1400px) {
+
+
+  }
+  
+  @media (max-width: 820px) {
+    .conteudo .menuPorts{
+      display: block;
+     }
+  
+     .linguagens{
+      display: none;
+     }
+  
+  
+  
+  
+    
+    .conteudo .botao img {
+      width: 60%;
+      border-radius: 3rem;
+      border-top: 0.5ex solid black;
+      border-left: 0.5ex solid black;
+      border-right: 2ex solid black;
+      border-bottom: 2ex solid black;
+    }
+  
+    .conteudo .menuPorts3{
+      display: inline-table;
+    
+     }
+  
+     .conteudo .menuPorts2{
+      display: block;
+      width: 100%;
+     }
+  
+     .conteudo .menuPorts3{
+      display: block;
+      width: 100%;
+    
+      
+     }
+  
+     .conteudo .menuPorts3 .botao {
+      width: 100%;
+    }
+  
+     .conteudo .menuPorts4{
+      display: flex;
+     
+     }
+  }
+  
+  /*css ocean*/
+  .waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+    
+  }
+  
+  .content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: #6f97cb;
+  }
+  .content a {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+  
+  .content img{
+    width: 4%;
+    margin-top:0px;
+    margin-bottom:0px;
+  }
+  
+  /* Animation */
+  
+  .ondas {
+    line-height: 0px !important;
+  }
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% {
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:26px;
+    }
+  }
+
+
+
+  @media (max-width: 1170px) {
+    /* Ocultar a coluna "Amigos" */
+    .coluna-direita { 
+        display: none; /* Esconde a coluna de amigos */
+    }
+
+    /* Centralizar o conteúdo do topo */
+    .topo {
+        justify-content: center; /* Centraliza os itens do topo */
+    }
+
+    /* Ocultar a foto */
+    #minha-foto { 
+        display: none; /* Esconde a foto */
+    }
+
+    /* Alterar a disposição das colunas */
+    .conteudo {
+        flex-direction: column; /* Altera a direção das colunas para vertical */
+        align-items: center; /* Centraliza as colunas horizontalmente */
+    }
+
+    .coluna-esquerda, .coluna-meio {
+        width: 100%; /* Garante que ambas ocupem a largura total */
+        margin-bottom: 1em; /* Espaço entre as colunas */
+    }
+}
