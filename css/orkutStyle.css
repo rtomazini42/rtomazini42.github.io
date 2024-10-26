@@ -304,7 +304,7 @@
   @media (max-width: 1130px) {
     /* Ocultar a coluna "Amigos" */
     .coluna-direita { 
-        display: none; /* Esconde a coluna de amigos */
+        display: block; /* Esconde a coluna de amigos */
     }
 
     /* Centralizar o conteúdo do topo */
@@ -339,7 +339,7 @@
         margin-right:0
     }
     .coluna-direita { 
-        display: none; /* Esconde a coluna de amigos */
+        display: block; /* Esconde a coluna de amigos */
     }
 
     /* Centralizar o conteúdo do topo */
@@ -374,12 +374,12 @@
         margin-right:0
     }
     .coluna-direita { 
-        display: none; /* Esconde a coluna de amigos */
+        display: block; /* Esconde a coluna de amigos */
     }
 
     /* Centralizar o conteúdo do topo */
     .topo a{
-        display: none; /* Centraliza os itens do topo */
+        display: block; /* Centraliza os itens do topo */
     }
 
     /* Ocultar a foto */
