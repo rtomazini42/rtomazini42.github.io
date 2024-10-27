@@ -36,6 +36,33 @@
     height: 100%; /* Garante que o elemento ocupa toda a altura */
 
   }
+
+  #cg_lang {
+    position: fixed;
+    right: 30px; /* Fixa o botão no lado direito da tela */
+    bottom: 30px; /* Fixa o botão na parte inferior */
+    border-width: 3px;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-color: #6f97cb;
+    background-color: #d9e6f7;
+    transition-duration: 0s;
+    z-index: 1;
+    font-size: xx-large;
+  }
+
+  .conteudo_game {
+    text-align: center;
+  }
+  
+  footer a{
+    font-size: small;
+  }
   
   .conteudo {
     display: flex;
@@ -243,7 +270,7 @@
     color: #ffffff;
     text-align: center;
     margin-bottom: 0px;
-    font-size: 2rem;
+    font-size: 1rem;
     text-decoration: none;
   }
   
@@ -253,6 +280,9 @@
     margin-bottom:0px;
   }
   
+  .lang{
+    background-color: #deeefd;
+  }
   /* Animation */
   
   .ondas {
