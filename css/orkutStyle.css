@@ -24,6 +24,10 @@
     color: white;
   }
 
+  .top_emoji .faded {
+    opacity: 0.5; /* Emoji mais apagado */
+  }
+
 
   #principal {
     background-color: #f4f4f4;
