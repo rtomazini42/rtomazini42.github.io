@@ -71,11 +71,11 @@ const amigos = [
         link: "https://github.com/brennomachado",
         imagem: "https://avatars.githubusercontent.com/u/3151658?v=4"
     },
-    //{
-    //    nome: "UFRPE",
-     //   link: "https://ufrpe.br/",
-    //    imagem: "https://ufrpe.br/sites/ufrpe.br/files/Logo%20UFRPE%20com%20texto_2.png"
-    //},
+    {
+        nome: "UFRPE",
+        link: "https://ufrpe.br/",
+        imagem: "assets/perfiisRerkut/ufrpe.jpg"
+    },
 ];
 
 // Função para sortear 6 amigos sem repetir
