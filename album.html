@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum de figurinhas</title>
+    <link rel="stylesheet" href="css/figurinhas.css">
+</head>
+<body>
+    <div>
+        <h1>Deck pessoal</h1>
+    </div>
+    
+
+
+
+
+<div id="album"></div>
+ 
+
+</body>
+
+<!-- Pego na página https://effect-labs.com/en/pages/blog/effet-holographique-css.html-->
+<script> 
+// Seleciona todos os cards (.holo-card e .commum-card)
+
+const cards = document.querySelectorAll('.holo-card, .commum-card, .legendary-card');
+
+cards.forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / centerY * -15;
+        const rotateY = (x - centerX) / centerX * 15;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+    });
+});
+
+// 1. Lista de figurinhas com título, imagem, descrição e o tipo (raridade)
+const figurinhas = [
+  {
+    tipo: 'legendary',
+    link: 'https://drive.google.com/file/d/1ogLhY_YWyxBnU9zcaYgA4soXRH84Dk29/view?usp=sharing',
+    titulo: 'Licenciatura em Computação',
+    imagem: 'assets/figurinhas/lc_logo.jpeg',
+    descricao: 'Universidade Federal Rural de Pernambuco'
+  },
+  {
+    tipo: 'legendary',
+    link: 'https://drive.google.com/file/d/1Nm4PmvjU1r1fRmnmm_wcMZ1oOhwVnxMx/view?usp=drive_link',
+    titulo: 'DESENVOLVEDOR DE JOGOS ELETRÔNICOS',
+    imagem: 'assets/novosImagens/games.png',
+    descricao: 'Curso de Extensão - UFRN'
+  },
+  {
+    tipo: 'holo',
+    link: 'https://drive.google.com/file/d/1As70yRXYeAjBOdZgthiZ5LSjCR6xlQo7/view?usp=sharing',
+    titulo: 'BIG DATA (CIÊNCIA DE DADOS)',
+    imagem: 'assets/figurinhas/BigData.png',
+    descricao: 'Pós Graduação - Faculdade Alcance (FAAL)'
+  },
+  {
+    tipo: 'holo',
+    link: 'https://drive.google.com/file/d/1_cCqMvoi1JKp5zymPvKdNdXHh3YyxsIr/view?usp=drive_link',
+    titulo: 'BANCO DE DADOS',
+    imagem: 'assets/figurinhas/database.png',
+    descricao: 'Pós Graduação - Faculdade Alcance (FAAL)'
+  },
+  {
+    tipo: 'holo',
+    link: 'https://drive.google.com/file/d/1BZvQuzWAWGrvXVZpd1uVME6OLINeEaDk/view?usp=drive_link',
+    titulo: 'ARQUITETURA E INFRAESTRUTURA DE T.I.',
+    imagem: 'assets/figurinhas/infra.png',
+    descricao: 'Pós Graduação - Faculdade Alcance'
+  },
+  {
+    tipo: 'holo',
+    link: 'https://drive.google.com/file/d/10h0BuFTP8Zd0RBonY8rM0CNyOdKIeAFr/view?usp=drive_link',
+    titulo: 'A complexidade sensível: Videogames e arte',
+    imagem: 'assets/figurinhas/unicamp.png',
+    descricao: 'Curso Online - UNICAMP / Coursera'
+  },
+  {
+    tipo: 'holo',
+    link: 'https://drive.google.com/file/d/1JkLNJBzFUOHkuH-hFnILaOhzjoWRF_v9/view?usp=drive_link',
+    titulo: 'Santander 2024 - Criando Jogos com Godot',
+    imagem: 'assets/figurinhas/godot.png',
+    descricao: 'Bootcamp - Digital Innovation One'
+  },
+ {
+    tipo: 'holo',
+    link: 'https://drive.google.com/file/d/1Q-YHwsYKIOyXzh2LHfVGUsBi7IkMbspx/view?usp=drive_link',
+    titulo: 'Iniciação à Docência - PIBID/UFRPE',
+    imagem: 'assets/figurinhas/pibid.png',
+    descricao: 'Programa Institucional - Licenciatura em Computação'
+  },
+  {
+    tipo: 'holo',
+    link: 'https://drive.google.com/file/d/1G9WvA3ADQ4jmI_U_EK1N713-t8BgRDJJ/view?usp=drive_link',
+    titulo: 'Matemática para Programação e Data Science',
+    imagem: 'assets/figurinhas/math.png',
+    descricao: 'Cursos Alura'
+  },
+  {
+    tipo: 'holo',
+    link: 'https://drive.google.com/file/d/1krguAEZV1CPku50AbJUw_K7Oy7t_Tk5D/view?usp=drive_link',
+    titulo: 'Humanidades digitales',
+    imagem: 'assets/figurinhas/humanidades.png',
+    descricao: 'Curso Online - Universitat Autònoma de Barcelona / Coursera'
+  },
+  {
+    tipo: 'commum',
+    link: 'https://drive.google.com/file/d/1LiRGW7Lk_FTEA0oAG70XiKHAwFSGNyJP/view?usp=drive_link',
+    titulo: 'Técnico em Informática',
+    imagem: 'assets/figurinhas/tecnico.png',
+    descricao: 'Habilitação Técnica - Escola Técnica Mercury'
+  },
+
+  {
+    tipo: 'commum',
+    link: 'https://drive.google.com/file/d/1JoFwBcp9iJfds6kW7oD0DxmLuFXSMUwX/view?usp=drive_link',
+    titulo: 'Formação C# e orientação a objetos',
+    imagem: 'assets/figurinhas/csharp.png',
+    descricao: 'Cursos Alura'
+  },
+
+  {
+    tipo: 'commum',
+    link: 'https://drive.google.com/file/d/1oC4-pYBW7zLOn5qUNew5Dowdv7ZQ7Hnk/view?usp=drive_link',
+    titulo: 'Formação Game Design',
+    imagem: 'assets/figurinhas/gamedesign.png',
+    descricao: 'Cursos Alura'
+  },
+
+  {
+    tipo: 'commum',
+    link: 'https://drive.google.com/file/d/1An4cXbp5dHvSgykMTkVaX_aevWuwTjNI/view?usp=drive_link',
+    titulo: 'Potência Tech powered by iFood | Ciência de Dados',
+    imagem: 'assets/figurinhas/ifood_data.png',
+    descricao: 'Bootcamp - Digital Innovation One'
+  },
+
+  {
+    tipo: 'commum',
+    link: 'https://drive.google.com/file/d/10znk2EhDw91Oel3qFCS6DWoDebZkN57i/view?usp=drive_link',
+    titulo: 'Potência Tech iFood - Desenvolvimento de Jogos',
+    imagem: 'assets/figurinhas/ifood_games.png',
+    descricao: 'Bootcamp - Digital Innovation One'
+  },
+
+  {
+    tipo: 'commum',
+    link: 'https://drive.google.com/file/d/1y2BxfDgPp50_2iFhR2fwWcQsOM_ucv4X/view?usp=drive_link',
+    titulo: 'Introdução à Ciência da Computação com Python Parte 1',
+    imagem: 'assets/figurinhas/python_usp1.png',
+    descricao: 'Curso Online - USP / Coursera'
+  },
+  {
+    tipo: 'commum',
+    link: 'https://drive.google.com/file/d/1wkSgXjjhLIoupVPrXb1e2GZ3G_MqornJ/view?usp=drive_link',
+    titulo: 'Introdução à Ciência da Computação com Python Parte 2',
+    imagem: 'assets/figurinhas/python_usp2.png',
+    descricao: 'Curso Online - USP / Coursera'
+  },
+  {
+    tipo: 'commum',
+    link: 'https://drive.google.com/file/d/10E9gcrmd0DTL-ZlMIezNSveN5KBIbziJ/view?usp=drive_link',
+    titulo: 'Linux do Zero',
+    imagem: 'assets/figurinhas/linux.png',
+    descricao: 'Bootcamp - Digital Innovation One'
+  },
+  {
+    tipo: 'commum',
+    link: 'https://drive.google.com/file/d/1vwJRmhwNtR5pJX1leTjC0j7bvvxmW1lU/view?usp=drive_link',
+    titulo: 'Formação Python',
+    imagem: 'assets/figurinhas/python_alura.png',
+    descricao: 'Cursos Alura'
+  },
+  {
+    tipo: 'commum',
+    link: 'https://drive.google.com/file/d/13MQdyhWEO_nY0Yy94Z3YIOjxG2UmLym_/view?usp=drive_link',
+    titulo: 'Formação UX Design',
+    imagem: 'assets/figurinhas/ux_alura.png',
+    descricao: 'Cursos Alura'
+  },
+
+
+
+];
+
+// 2. Elemento pai onde os cards serão inseridos
+const album = document.getElementById('album');
+
+// 3. Função para renderizar os cards dinamicamente
+function renderizarAlbum() {
+    // Limpa o álbum antes de renderizar
+    album.innerHTML = '';
+
+    figurinhas.forEach((item) => {
+        const classeBase = `${item.tipo}-card`;
+
+        // Cria o elemento principal do card
+        const card = document.createElement('div');
+        card.className = classeBase;
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+
+        // Preenche a estrutura HTML interna
+        card.innerHTML = `
+            <a href=${item.link}>
+            <div class="${classeBase}-content">
+                <div class="${classeBase}-title">${item.titulo}</div>
+                <div class="${classeBase}-icon"><img src="${item.imagem}" alt="${item.titulo}"></div>
+                <div class="${classeBase}-subtitle">${item.descricao}</div>
+            </div>
+            </a>
+        `;
+
+        // Atribui os eventos de interatividade 3D diretamente ao card criado
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -15;
+            const rotateY = ((x - centerX) / centerX) * 15;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        });
+
+        // Adiciona o card ao container #album
+        album.appendChild(card);
+    });
+}
+
+// Executa a renderização ao carregar a página
+renderizarAlbum();
+    </script>
+</html>
