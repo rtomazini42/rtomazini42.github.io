@@ -304,33 +304,33 @@ a {
 
 
 
-/* Estilo base unificado para todos os títulos dos cards */
+/* seguirei o copilot, unificarei isso */
 .holo-card-title,
 .commum-card-title,
 .legendary-card-title {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
-  font-size: 18px;            /* Tamanho fixo e consistente da fonte */
-  line-height: 1.2;           /* Altura de cada linha */
-  height: 2.4em;              /* Exatamente 2 linhas (1.2 * 2) */
+  font-size: 18px;            
+  line-height: 1.2;          
+  height: 2.4em;              
   
-  /* Centraliza o texto verticalmente se ele tiver apenas 1 linha */
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* Corta com "..." se o texto for maior que 2 linhas */
+
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 
-  /* Margem para não colar no topo do card */
+
   margin-top: 8px;
   margin-bottom: 8px;
 }
 
-/* Mantém as cores específicas de cada tipo de card */
+
 .holo-card-title {
   color: #f1f1f1;
 }
