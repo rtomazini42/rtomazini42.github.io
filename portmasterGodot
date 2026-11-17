@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Godot 4.3 no PortMaster - Guia Rápido pessoal</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f6f8; --panel:#fff; --text:#20242b; --muted:#626b78; --line:#e2e6eb; --accent:#315ea8; --code:#171b22; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+    main { width:min(920px, calc(100% - 32px)); margin:40px auto; }
+    header, section { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:24px; margin-bottom:18px; }
+    h1 { margin:0 0 8px; font-size:clamp(1.7rem,4vw,2.3rem); line-height:1.2; }
+    h2 { margin:0 0 14px; font-size:1.25rem; }
+    h3 { margin:20px 0 8px; font-size:1rem; }
+    p { margin:8px 0; }
+    .sub, .note { color:var(--muted); }
+    .tag { display:inline-block; padding:3px 9px; border-radius:99px; background:#eaf0fb; color:var(--accent); font-size:.82rem; font-weight:650; }
+    ul, ol { padding-left:22px; }
+    li { margin:5px 0; }
+    code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:.92em; background:#eef0f3; padding:2px 5px; border-radius:4px; overflow-wrap:anywhere; }
+    pre { overflow-x:auto; background:var(--code); color:#edf1f7; padding:18px; border-radius:9px; font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace; }
+    pre code { background:none; color:inherit; padding:0; font-size:inherit; }
+    .callout { border-left:4px solid var(--accent); background:#f0f4fb; padding:12px 15px; border-radius:5px; margin:14px 0; }
+    table { width:100%; border-collapse:collapse; margin:12px 0; }
+    th,td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+    th { width:34%; color:var(--muted); font-weight:600; }
+    footer { color:var(--muted); font-size:.9rem; text-align:center; padding:12px; }
+    @media (max-width:600px) { main { width:min(100% - 20px,920px); margin:16px auto; } header,section { padding:17px; } th { width:40%; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="tag">Manual rápido</span>
+    <h1>Godot 4.3 no PortMaster</h1>
+    <p class="sub">Guia de configuração, exportação e execução de um jogo Godot usando o runtime do PortMaster.</p>
+    <p class="sub">Sendo transparente: O DeepSeek ajudou a criar meus primeiros testes de bash, pois eram muito extensos. O trabalho foi humano, a IA, nesse caso, não fez trabalho criativo, apenas digitou texto. Mesmo assim, é desconfortável usar.</p>
+  </header>
+
+  <section>
+    <h2>1. Ambiente testado</h2>
+    <table>
+      <tr><th>Engine do projeto</th><td>Godot 4.3</td></tr>
+      <tr><th>Runtime PortMaster</th><td><code>godot_4.3.squashfs</code></td></tr>
+      <tr><th>Executável dentro do runtime</th><td><code>godot43.aarch64</code></td></tr>
+      <tr><th>Arquitetura reportada</th><td><code>aarch64</code> (ARM 64-bit)</td></tr>
+      <tr><th>Plataforma / firmware reportado</th><td> dArkOSRE</td></tr>
+      <tr><th>Identificação reportada pelo sistema</th><td>RG351MP / RK3326</td></tr>
+      <tr><th>Resolução reportada</th><td>640 × 480 pixels (4:3)</td></tr>
+      <tr><th>Formato entregue</th><td>Arquivo de recursos <code>.pck</code>, carregado pelo runtime do PortMaster</td></tr>
+      <tr><th>Controles</th><td>Arquivo <code>.gptk</code> usado pelo GPTOKEYB</td></tr>
+    </table>
+    <div class="callout"><strong>Nota sobre o aparelho:</strong> durante o teste, o arquivo <code>control.txt</code> identificou o dispositivo como RG351MP. Se o aparelho físico for um R36S, confira essa identificação antes de reutilizar esta configuração em outro sistema. O dado comprovado no teste é a resolução 640×480 e a arquitetura aarch64.</div>
+  </section>
+
+  <section>
+    <h2>2. Configurações do projeto Godot</h2>
+    <ul>
+      <li><strong>Versão:</strong> Godot 4.3. Use a mesma versão para editar e exportar o projeto.</li>
+      <li><strong>Renderizador:</strong> Compatibility (compatibilidade), adequado ao caminho gráfico OpenGL ES usado no launcher.</li>
+      <li><strong>Resolução-base:</strong> 640 × 480, proporção 4:3.</li>
+      <li><strong>Linguagem:</strong> GDScript.</li>
+      <li><strong>Saída:</strong> pacote de recursos <code>teste_para_r36s.pck</code>.</li>
+    </ul>
+    <p class="note">A resolução 640×480 foi lida do sistema. Ela é uma referência para o tamanho-base do jogo; o ajuste de escala e o modo de stretch dependem de como o projeto foi desenhado e precisam ser conferidos visualmente no aparelho.</p>
+  </section>
+
+  <section>
+    <h2>3. Exportação no Godot</h2>
+    <ol>
+      <li>Abra o projeto no Godot 4.3.</li>
+      <li>Confirme em <strong>Project → Project Settings → Display → Window</strong> a resolução-base de 640×480, caso esse seja o layout desejado.</li>
+      <li>Em <strong>Rendering → Renderer</strong>, selecione <strong>gl_compatibility</strong> / Compatibility.</li>
+      <li>Abra <strong>Project → Export</strong> e configure o preset de exportação Linux/BSD compatível com o fluxo do projeto.</li>
+      <li>Exporte o pacote de recursos como <code>teste_para_r36s.pck</code> (Export PCK/ZIP, quando disponível no preset).</li>
+      <li>Copie o PCK para a pasta do port no cartão SD.</li>
+    </ol>
+    <div class="callout"><strong>Importante:</strong> o launcher usa o executável Godot fornecido pelo PortMaster e passa o PCK com <code>--main-pack</code>. Portanto, neste fluxo, o arquivo principal do jogo é o PCK; não renomeie o executável do runtime. As opções exatas do preset de exportação não foram registradas nos testes originais e devem ser mantidas conforme o preset que gerou o PCK funcional.</div>
+  </section>
+
+  <section>
+    <h2>4. Estrutura de arquivos no cartão SD</h2>
+    <pre><code>/roms2/ports/teste_para_r36s/
+├── teste_para_r36s.sh
+├── teste_para_r36s.pck
+├── teste_para_r36s.gptk
+└── conf/
+
+/opt/system/Tools/PortMaster/libs/
+├── godot_4.3.squashfs
+└── weston_pkg_0.2.squashfs</code></pre>
+    <p>O teste também encontrou os runtimes em <code>/roms2/tools/PortMaster/libs/</code>. O launcher abaixo usa o caminho de <code>/opt/system/Tools/PortMaster</code>.</p>
+  </section>
+
+  <section>
+    <h2>5. Launcher Bash funcional</h2>
+    <p>Salve como <code>/roms2/ports/teste_para_r36s/teste_para_r36s.sh</code>. O arquivo começa com <code>#!/bin/sh</code>, mas relança a si próprio com Bash porque o PortMaster pode chamá-lo por <code>sh</code>.</p>
+    <pre><code>#!/bin/sh
+
+if [ -z "$BASH_VERSION" ]; then
+    exec /bin/bash "$0" "$@"
+fi
+
+GAMEDIR="/roms2/ports/teste_para_r36s"
+LOG="$GAMEDIR/log.txt"
+
+mkdir -p "$GAMEDIR"
+exec &gt; "$LOG" 2&gt;&amp;1
+
+echo "======================================"
+echo "INICIANDO JOGO GODOT 4.3"
+echo "Data: $(date)"
+echo "======================================"
+
+# PortMaster
+XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
+
+if [ -d "/opt/system/Tools/PortMaster" ]; then
+    controlfolder="/opt/system/Tools/PortMaster"
+elif [ -d "/opt/tools/PortMaster" ]; then
+    controlfolder="/opt/tools/PortMaster"
+else
+    controlfolder="$XDG_DATA_HOME/PortMaster"
+fi
+
+source "$controlfolder/control.txt"
+get_controls
+
+GODOT="$controlfolder/libs/godot_4.3.squashfs"
+WESTON="$controlfolder/libs/weston_pkg_0.2.squashfs"
+
+GODOT_DIR="/tmp/godot"
+WESTON_DIR="/tmp/weston"
+
+GODOT_BIN="$GODOT_DIR/godot43.aarch64"
+PCK="$GAMEDIR/teste_para_r36s.pck"
+GPTK="$GAMEDIR/teste_para_r36s.gptk"
+
+# Verificar arquivos de runtime e jogo
+echo
+echo "Verificando arquivos..."
+
+for FILE in "$GODOT" "$WESTON" "$PCK"; do
+    if [ ! -f "$FILE" ]; then
+        echo "ERRO: arquivo nao encontrado: $FILE"
+        exit 1
+    fi
+done
+
+# Preparar pontos de montagem
+mkdir -p "$GODOT_DIR" "$WESTON_DIR"
+
+# Montar Godot PRIMEIRO
+echo
+echo "Montando Godot..."
+
+if [ "$PM_CAN_MOUNT" != "N" ]; then
+    $ESUDO umount "$GODOT_DIR" 2&gt;/dev/null || true
+fi
+
+$ESUDO mount "$GODOT" "$GODOT_DIR" || {
+    echo "ERRO: falha ao montar Godot"
+    exit 1
+}
+
+echo "Godot montado."
+
+# Agora verificar o executavel
+echo
+echo "Verificando executavel Godot..."
+
+ls -la "$GODOT_DIR"
+
+if [ ! -x "$GODOT_BIN" ]; then
+    echo "ERRO: executavel nao encontrado: $GODOT_BIN"
+    exit 1
+fi
+
+echo "Executavel confirmado: $GODOT_BIN"
+
+# Montar Weston
+echo
+echo "Montando Weston..."
+
+if [ "$PM_CAN_MOUNT" != "N" ]; then
+    $ESUDO umount "$WESTON_DIR" 2&gt;/dev/null || true
+fi
+
+$ESUDO mount "$WESTON" "$WESTON_DIR" || {
+    echo "ERRO: falha ao montar Weston"
+    exit 1
+}
+
+if [ ! -f "$WESTON_DIR/westonwrap.sh" ]; then
+    echo "ERRO: westonwrap.sh nao encontrado"
+    exit 1
+fi
+
+echo "Weston montado."
+
+# Preparar jogo
+cd "$GAMEDIR" || exit 1
+
+export XDG_DATA_HOME="$GAMEDIR/conf"
+mkdir -p "$XDG_DATA_HOME"
+
+# Controles
+if [ -n "$GPTOKEYB" ] &amp;&amp; [ -f "$GPTK" ]; then
+    echo "Iniciando controles..."
+    $GPTOKEYB "godot43.aarch64" -c "$GPTK" &amp;
+fi
+
+# Executar
+echo
+echo "======================================"
+echo "INICIANDO GODOT"
+echo "======================================"
+
+$ESUDO "$WESTON_DIR/westonwrap.sh" \
+    headless noop kiosk crusty_x11egl \
+    "$GODOT_BIN" \
+    --rendering-driver opengl3_es \
+    --audio-driver ALSA \
+    --main-pack "$PCK"
+
+GAME_EXIT=$?
+
+echo
+echo "Jogo finalizado. Codigo: $GAME_EXIT"
+
+# Limpeza
+$ESUDO "$WESTON_DIR/westonwrap.sh" cleanup
+
+if [ "$PM_CAN_MOUNT" != "N" ]; then
+    $ESUDO umount "$WESTON_DIR" 2&gt;/dev/null || true
+    $ESUDO umount "$GODOT_DIR" 2&gt;/dev/null || true
+fi
+
+pm_finish
+
+exit "$GAME_EXIT"</code></pre>
+  </section>
+
+  <section>
+    <h2>6. Opções importantes do launcher</h2>
+    <table>
+      <tr><th>Godot</th><td><code>godot_4.3.squashfs</code></td></tr>
+      <tr><th>Executável interno</th><td><code>godot43.aarch64</code></td></tr>
+      <tr><th>Weston</th><td><code>weston_pkg_0.2.squashfs</code></td></tr>
+      <tr><th>Renderer</th><td><code>--rendering-driver opengl3_es</code></td></tr>
+      <tr><th>Áudio</th><td><code>--audio-driver ALSA</code></td></tr>
+      <tr><th>Pacote do jogo</th><td><code>--main-pack "$PCK"</code></td></tr>
+      <tr><th>Controles</th><td><code>GPTOKEYB "godot43.aarch64" -c "$GPTK"</code></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>7. Problemas encontrados e soluções</h2>
+    <ul>
+      <li><strong><code>source: not found</code>:</strong> o PortMaster chamou o script com <code>/bin/sh</code>. Solução: relançar o script com <code>/bin/bash</code> antes de usar <code>source</code>.</li>
+      <li><strong><code>failed to setup loop device</code>:</strong> a montagem precisava dos privilégios configurados pelo PortMaster. Solução: usar <code>$ESUDO mount</code> e <code>$ESUDO umount</code>.</li>
+      <li><strong>Executável não encontrado:</strong> o nome real dentro do runtime é <code>godot43.aarch64</code>, não <code>godot_4.3.aarch64</code>.</li>
+      <li><strong>Verificação antes da montagem:</strong> o executável só existe em <code>/tmp/godot/</code> depois que o SquashFS é montado. Por isso, montar primeiro e verificar depois.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Checklist para outro jogo</h2>
+    <ul>
+      <li>Usar Godot 4.3 para manter a versão compatível com o runtime testado.</li>
+      <li>Manter o renderizador Compatibility.</li>
+      <li>Exportar o PCK e conferir o nome usado no launcher.</li>
+      <li>Colocar PCK, GPTK e SH na mesma pasta do port, ajustando os nomes no script.</li>
+      <li>Confirmar a arquitetura e a resolução reportadas pelo sistema de destino.</li>
+      <li>Se houver falha, consultar <code>log.txt</code> na pasta do jogo.</li>
+    </ul>
+  </section>
+  <footer>Guia baseado nos testes que conseguiram iniciar o jogo com Godot 4.3 e PortMaster.</footer>
+</main>
+</body>
+</html>
